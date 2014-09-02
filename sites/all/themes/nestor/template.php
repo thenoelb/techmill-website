@@ -105,7 +105,7 @@ function nestor_preprocess_page(&$variables) {
   if (empty($variables['page']['sidebar_first']) && empty($variables['page']['sidebar_second'])) {
     foreach ($variables['page']['content'] as $key => $value) {
       if (isset($value['#block'])) {
-        $variables['page']['content'][$key]['#block']->sidebar_exists = FALSE;
+        // $variables['page']['content'][$key]['#block']->sidebar_exists = FALSE;
       }
     }
   }
