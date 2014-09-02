@@ -1,0 +1,59 @@
+<?php
+/**
+ * @file
+ * Code for the TechMill Article feature.
+ */
+
+include_once 'techmill_article.features.inc';
+
+/**
+ * Implements hook_ds_fields_info().
+ */
+function techmill_article_ds_fields_info($entity_type) {
+	$fields = array();
+	$fields['author_article_info'] = array(
+		'title' => t('TechMill: Author & Article Information'),
+		'field_type' => DS_FIELD_TYPE_FUNCTION,
+		'function' => '_techmill_user_ds_field_author_article_info',
+		);
+
+	return array('node' => $fields);
+}
+
+/**
+ * Custom field displaying a users social media accounts.
+ */
+function _techmill_user_ds_field_author_article_info($field) {
+	if (isset($field['entity_type']) && $field['entity_type'] == 'node') {
+		$entity = $field['entity'];
+		$links = array();
+
+		// Get author information
+		$user = user_load($entity->uid);
+		$name = (isset($user->realname)) ? $user->realname : $user->name;
+		$links[] = l($name, 'users/'.$user->uid, array('attributes' => array('class'=> 'author', 'title' => $name)));
+
+		// Get post date
+		$links[] = format_date($entity->created, 'custom', 'F d, Y');
+
+		// Get Disqus info
+		if (module_exists('disqus')) {
+			drupal_add_js(drupal_get_path('module', 'disqus') . '/disqus.js');
+			drupal_add_js(array('disqusComments' => $entity->disqus['domain']), 'setting');
+			global $base_url;
+			$node = 'node/'.$entity->nid;
+			$links[] = l('0 Comments', $base_url.'/'.drupal_get_path_alias($node).'#disqus_thread', array('attributes' => array('data-disqus-identifier' => $node, 'class' => 'disqus-comments')));
+		}
+
+		$data = array(
+			'items'=> $links,
+			'title' => NULL,
+			'type' => 'ul',
+			'attributes' => array(
+				'class' => 'article-info',
+			)
+		);
+		return theme('item_list', $data);;
+	}
+	return FALSE;
+}

@@ -1,0 +1,39 @@
+// Media query variables.
+@mobile:  		~"screen and (max-width: 767px)";
+@tablet:  		~"screen and (min-width: 768px)";
+@tablet-min:  ~"screen and (min-width: 768px) and (max-width: 991px)";
+@tablet-max: 	~"screen and (max-width: 991px)";
+@normal:  		~"screen and (min-width: 992px) and (max-width: 1199px)";
+@normal-min:	~"screen and (min-width: 992px)";
+@normal-max:	~"screen and (max-width: 1199px)";
+@wide:    		~"screen and (min-width: 1200px)";
+
+/* Breadcrumbs */
+.breadcrumbs {
+	font-size: 0.8em;
+	line-height: normal;
+	margin: 0;
+	padding: 0;
+	line-height: 2.1em;
+	.delimiter {
+		padding: 0 5px;
+	}
+}
+
+.label-inline {
+	display: inline;
+}
+
+.field-name-field-tags {
+	a {
+		background-color: @brand-primary;
+		border: 1px solid @brand-primary;
+		color: white;
+		margin-right: 10px;
+		padding: 1px 5px 3px;
+		&:hover {
+			background-color: darken(@brand-primary, 10%);
+			color: white;
+		}
+	}
+}

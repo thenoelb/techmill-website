@@ -1,0 +1,38 @@
+	.user-profile {
+		&.view-mode-about_the_author {
+			border-bottom: 1px solid @gray-light;
+			.group-left {
+				overflow: auto;
+				.field {
+					display: inline-block;
+					float: left;
+					margin-right: 1em;
+				}
+			}
+		}
+	}
+
+	.user-social-media {
+		padding: 0;
+		overflow: auto;
+		li {
+			display: inline-block;
+			float: left;
+			list-style: none;
+			margin-right: 10px;
+			a {
+				background-color: @brand-primary;
+				color: white;
+				display: inline-block;
+				.font-size(1.8);
+				height: 25px;
+				line-height: 1em;
+				padding: 3px 0 0;
+				text-align: center;
+				width: 25px;
+				&:hover {
+					background-color: darken(@brand-primary, 15%);
+				}
+			}
+		}
+	}
