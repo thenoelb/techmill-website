@@ -28,24 +28,10 @@ stylesheets[all][] = css/style.css
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;
 
-;scripts[] = 'bootstrap/js/affix.js'
-;scripts[] = 'bootstrap/js/alert.js'
-;scripts[] = 'bootstrap/js/button.js'
-;scripts[] = 'bootstrap/js/carousel.js'
-;scripts[] = 'bootstrap/js/collapse.js'
-;scripts[] = 'bootstrap/js/dropdown.js'
-;scripts[] = 'bootstrap/js/modal.js'
-;scripts[] = 'bootstrap/js/tooltip.js'
-;scripts[] = 'bootstrap/js/popover.js'
-;scripts[] = 'bootstrap/js/scrollspy.js'
-;scripts[] = 'bootstrap/js/tab.js'
-;scripts[] = 'bootstrap/js/transition.js'
-
 scripts[] = 'js/enterprise_bootstrap.js'
 
 ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
 settings[bootstrap_cdn] = ''
-
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Theme Settings
@@ -58,13 +44,13 @@ settings[toggle_secondary_menu] = 0
 
 ; Enterprise Bootstrap
 ; ---------------
-settings[enterprise_bootstrap_front_container] = wide
+settings[enterprise_bootstrap_front_container] = 1
 settings[enterprise_bootstrap_sidebar_column] = 0
 settings[enterprise_bootstrap_block_striping] = 1
 settings[title_placement] = 1
-settings[title_container] = wide
+settings[title_container] = 1
 settings[highlighted_placement] = 1
-settings[highlighted_container] = container
-settings[header_container] = container
-settings[footer_container] = wide
+settings[highlighted_container] = 0
+settings[header_container] = 0
+settings[footer_container] = 1
 

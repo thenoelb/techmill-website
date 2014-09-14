@@ -18,52 +18,52 @@ function enterprise_bootstrap_form_system_theme_settings_alter(&$form, &$form_st
 	$form['enterprise_bootstrap_config']['enterprise_bootstrap_front_container'] = array(
 		'#type' => 'select',
 		'#title' => t('Full Width Block Containers'),
-		'#options' => array(
-			'container' => t('Boxed'),
-			'wide' => t('Wide'),
-		),
 		'#default_value' => theme_get_setting('enterprise_bootstrap_front_container'),
 		'#description' => t('Choose to either turn the blocks on the front page into full-width containers or leave them boxed.'),
+		'#options' => array(
+			0 => t('Boxed'),
+			1 => t('Wide'),
+		),
 	);
 	$form['enterprise_bootstrap_config']['enterprise_bootstrap_sidebar_column'] = array(
 		'#type' => 'select',
 		'#title' => t('Sidebar Column Width'),
+		'#default_value' => theme_get_setting('enterprise_bootstrap_sidebar_column'),
+		'#description' => t('Default column width is col-sm-3, wide is col-sm-4'),
 		'#options' => array(
 			0 => t('Default'),
 			1 => t('Wide'),
 		),
-		'#default_value' => theme_get_setting('enterprise_bootstrap_sidebar_column'),
-		'#description' => t('Default column width is col-sm-3, wide is col-sm-4'),
 	);
 	$form['enterprise_bootstrap_config']['enterprise_bootstrap_sidebars_front'] = array(
 		'#type' => 'select',
 		'#title' => t('Sidebars on Front'),
+		'#default_value' => theme_get_setting('enterprise_bootstrap_sidebars_front'),
+		'#description' => t('If no, the sidebars will never be loaded on the front page. Alternatively, if sidebars are allowed and exist, the front page will never be rendered as wide.'),
 		'#options' => array(
 			0 => t('No'),
 			1 => t('Yes'),
 		),
-		'#default_value' => theme_get_setting('enterprise_bootstrap_sidebars_front'),
-		'#description' => t('If no, the sidebars will never be loaded on the front page. Alternatively, if sidebars are allowed and exist, the front page will never be rendered as wide.'),
 	);
 	$form['enterprise_bootstrap_config']['enterprise_bootstrap_block_striping'] = array(
 		'#type' => 'select',
 		'#title' => t('Block Striping'),
+		'#default_value' => theme_get_setting('enterprise_bootstrap_block_striping'),
+		'#description' => t('Adds block striping classes to the home page.'),
 		'#options' => array(
 			0 => t('No'),
 			1 => t('Yes'),
 		),
-		'#default_value' => theme_get_setting('enterprise_bootstrap_block_striping'),
-		'#description' => t('Adds block striping classes to the home page.'),
 	);
 	$form['enterprise_bootstrap_config']['enterprise_bootstrap_blokkfont'] = array(
 		'#type' => 'select',
 		'#title' => t('Blokk Font'),
+		'#default_value' => theme_get_setting('enterprise_bootstrap_blokkfont'),
+		'#description' => t('Enables Blokk Neue as the default font. Great for testing designs.'),
 		'#options' => array(
 			0 => t('No'),
 			1 => t('Yes'),
 		),
-		'#default_value' => theme_get_setting('enterprise_bootstrap_blokkfont'),
-		'#description' => t('Enables Blokk Neue as the default font. Great for testing designs.'),
 	);
 
 	$form['enterprise_bootstrap_region_settings'] = array(
@@ -71,6 +71,33 @@ function enterprise_bootstrap_form_system_theme_settings_alter(&$form, &$form_st
 		'#group' => 'enterprise_bootstrap',
 		'#title' => t('Region settings'),
 		'#description' => t('Settings regarding the container status of each region (excluding the front page).'),
+	);
+
+	/********************* Front Page Settings ***********************/
+	$form['enterprise_bootstrap_region_settings']['front_page'] = array(
+		'#type' => 'fieldset',
+		'#group' => 'enterprise_bootstrap_region_settings',
+		'#title' => t('Front Page Settings Only'),
+		'#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+	);
+	$form['enterprise_bootstrap_region_settings']['front_page']['header_container_front'] = array(
+		'#type' => 'select',
+		'#title' => t('Top Bar (Header) Container'),
+		'#default_value' => theme_get_setting('header_container_front'),
+		'#options' => array(
+			0 => t('Boxed'),
+			1 => t('Wide'),
+		),
+	);
+	$form['enterprise_bootstrap_region_settings']['front_page']['highlighted_container_front'] = array(
+		'#type' => 'select',
+		'#title' => t('Highlighted Container'),
+		'#default_value' => theme_get_setting('highlighted_container_front'),
+		'#options' => array(
+			0 => t('Boxed'),
+			1 => t('Wide'),
+		),
 	);
 
 	/********************* Title Region Settings ***********************/
@@ -107,6 +134,30 @@ function enterprise_bootstrap_form_system_theme_settings_alter(&$form, &$form_st
 		'#description' => t('Add classes for the title region, separated by space.')
 	);
 
+	/********************* Top Bar (header) Region Settings ***********************/
+	$form['enterprise_bootstrap_region_settings']['header'] = array(
+		'#type' => 'fieldset',
+		'#group' => 'enterprise_bootstrap_region_settings',
+		'#title' => t('Top Bar (Header)'),
+		'#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+	);
+	$form['enterprise_bootstrap_region_settings']['header']['header_container'] = array(
+		'#type' => 'select',
+		'#title' => t('Top Bar (Header) Container'),
+		'#default_value' => theme_get_setting('header_container'),
+		'#options' => array(
+			0 => t('Boxed'),
+			1 => t('Wide'),
+		),
+	);
+	$form['enterprise_bootstrap_region_settings']['header']['header_class'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Header Class'),
+		'#default_value' => theme_get_setting('header_class'),
+		'#description' => t('Add classes for the header region, separated by space.')
+	);
+
 	/********************* Highlighted Region Settings ***********************/
 	$form['enterprise_bootstrap_region_settings']['highlighted'] = array(
 		'#type' => 'fieldset',
@@ -118,51 +169,27 @@ function enterprise_bootstrap_form_system_theme_settings_alter(&$form, &$form_st
 	$form['enterprise_bootstrap_region_settings']['highlighted']['highlighted_placement'] = array(
 		'#type' => 'select',
 		'#title' => t('Highlighted Placement'),
+		'#default_value' => theme_get_setting('highlighted_placement'),
+		'#description' => t('Choose to either place this above the content/sidebars, or inside the content area.'),
 		'#options' => array(
 			0 => t('Above content area'),
 			1 => t('Inside content area'),
 		),
-		'#default_value' => theme_get_setting('highlighted_placement'),
-		'#description' => t('Choose to either place this above the content/sidebars, or inside the content area.'),
 	);
 	$form['enterprise_bootstrap_region_settings']['highlighted']['highlighted_container'] = array(
 		'#type' => 'select',
 		'#title' => t('Highlighted Container'),
+		'#default_value' => theme_get_setting('highlighted_container'),
 		'#options' => array(
 			0 => t('Boxed'),
 			1 => t('Wide'),
 		),
-		'#default_value' => theme_get_setting('highlighted_container'),
 	);
 	$form['enterprise_bootstrap_region_settings']['highlighted']['highlighted_class'] = array(
 		'#type' => 'textfield',
 		'#title' => t('Highlighted Class'),
 		'#default_value' => theme_get_setting('highlighted_class'),
 		'#description' => t('Add classes for the highlighted region, separated by space.')
-	);
-
-	/********************* Top Bar (header) Region Settings ***********************/
-	$form['enterprise_bootstrap_region_settings']['header'] = array(
-		'#type' => 'fieldset',
-		'#group' => 'enterprise_bootstrap_region_settings',
-		'#title' => t('Top Bar (Header)'),
-		'#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-	);
-	$form['enterprise_bootstrap_region_settings']['header']['header_container'] = array(
-		'#type' => 'select',
-		'#title' => t('Header Container'),
-		'#options' => array(
-			'container' => t('Boxed'),
-			'wide' => t('Wide'),
-		),
-		'#default_value' => theme_get_setting('header_container'),
-	);
-	$form['enterprise_bootstrap_region_settings']['header']['header_class'] = array(
-		'#type' => 'textfield',
-		'#title' => t('Header Class'),
-		'#default_value' => theme_get_setting('header_class'),
-		'#description' => t('Add classes for the header region, separated by space.')
 	);
 
 	/********************* Footer Region Settings ***********************/

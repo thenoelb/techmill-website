@@ -65,13 +65,16 @@ function enterprise_bootstrap_preprocess_page(&$variables) {
   $variables['title_class'] = theme_get_setting('title_class');
 
   // Highlighted region options.
+  $variables['highlighted_container_front'] = theme_get_setting('highlighted_container_front');
   $variables['highlighted_placement'] = theme_get_setting('highlighted_placement');
   $variables['highlighted_container'] = theme_get_setting('highlighted_container');
   $variables['highlighted_row'] = ($variables['highlighted_container']) ? '' : 'row';
   $variables['highlighted_class'] = theme_get_setting('highlighted_class');
 
   // Header region options.
+  $variables['header_container_front'] = theme_get_setting('header_container_front');
   $variables['header_container'] = theme_get_setting('header_container');
+  $variables['header_row'] = ($variables['header_container']) ? '' : 'row';
   $variables['header_class'] = theme_get_setting('header_class');
 
   // Footer region options.
@@ -80,7 +83,8 @@ function enterprise_bootstrap_preprocess_page(&$variables) {
 
   // Make blocks full width on front page.
   // @todo: look into switching page template based on path.
-  $variables['full_width_container'] = theme_get_setting('enterprise_bootstrap_front_container');
+  $variables['full_width_front'] = theme_get_setting('enterprise_bootstrap_front_container');
+  $variables['full_width_container'] = ($variables['full_width_front']) ? 'wide' : 'container';
   $variables['full_width_anti_container'] = ($variables['full_width_container'] == 'wide') ? 'container' : 'wide';
   $variables['sidebars_front'] = theme_get_setting('enterprise_bootstrap_sidebars_front');
 
@@ -151,7 +155,7 @@ function enterprise_bootstrap_preprocess_block(&$variables) {
   if (isset($variables['elements']['#block']->block_container) && $variables['elements']['#block']->block_container == 'content') {
     // Only add container class if it's the front page and NOT the main system block.
     $block_container = theme_get_setting('enterprise_bootstrap_front_container');
-    if ($variables['is_front'] && $block_container == 'wide') {
+    if ($variables['is_front'] && $block_container) {
       $variables['theme_hook_suggestions'][] = 'block__container';
     }
   }

@@ -78,39 +78,27 @@
   <?php include 'includes/navigation.inc'; ?>
 
   <?php if(!$title_placement): include 'includes/title.inc'; endif; ?>
+  <?php include 'includes/header.inc'; ?>
   <?php if(!$highlighted_placement): include 'includes/highlighted.inc'; endif; ?>
 
   <div class="main-container container">
 
-  <?php include 'includes/header.inc'; ?>
   <div class="main-container-inner row">
-    <?php if (!empty($page['sidebar_first'])): ?>
-      <aside class="<?php print $sidebar_column_class; ?>" role="complementary">
-        <?php print render($page['sidebar_first']); ?>
-      </aside>  <!-- /#sidebar-first -->
-    <?php endif; ?>
+    <!-- Sidebar First -->
+    <?php include 'includes/sidebar_first.inc'; ?>
+    <!-- /Sidebar First -->
 
-    <section<?php print $content_column_class; ?>>
+    <section id="main-content-region" <?php print $content_column_class; ?>>
 
       <?php if($highlighted_placement): include 'includes/highlighted.inc'; endif; ?>
       <?php if($title_placement): include 'includes/title.inc'; endif; ?>
       <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>
 
-      <!-- Tabs, Help, Information -->
-      <div class="information">
-        <?php print render($title_suffix); ?>
-        <?php print $messages; ?>
-        <?php if (!empty($tabs)): ?>
-          <?php print render($tabs); ?>
-        <?php endif; ?>
-        <?php if (!empty($page['help'])): ?>
-          <?php print render($page['help']); ?>
-        <?php endif; ?>
-        <?php if (!empty($action_links)): ?>
-          <ul class="action-links"><?php print render($action_links); ?></ul>
-        <?php endif; ?>
-      </div>
+      <!-- Information -->
+      <?php include 'includes/information.inc'; ?>
+      <!-- /Information -->
+
       <?php print render($page['content']); ?>
     </section>
 
