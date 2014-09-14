@@ -21,3 +21,29 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+
+header {
+	min-height: 0 !important;
+}
+.nestor-main-menu {
+	padding-top: 0.75em;
+	.nav {
+		> li {
+			> a {
+				padding: 23px 35px;
+				.stuck & {
+					padding-bottom: 23px !important;
+				}
+			}
+		}
+	}
+	.stuck & {
+		padding-top: 0.75em !important;
+	}
+}
+#site-name {
+	h1 {
+		margin: 0.75em 0 0;
+		.font-size(3);
+	}
+}

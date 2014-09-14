@@ -1,4 +1,4 @@
-name = TechMill Social
-description = Adds social fields to site information.
+name = Techmill Social
 core = 7.x
-files[] = tests/techmill_social.test
+package = TechMill
+version = 7.x-1.0

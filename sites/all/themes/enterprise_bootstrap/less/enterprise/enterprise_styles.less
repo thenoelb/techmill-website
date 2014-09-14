@@ -1,0 +1,203 @@
+.style-date-stacked {
+    margin-right: 10px;
+    position: relative;
+    width: 55px;
+    .day, .month {
+        color: #fff;
+        display: block;
+        text-align: center;
+    }
+    .day {
+        background: #666;
+        font-size: 30px;
+        font-size: 3rem;
+        font-weight: 600;
+        padding: 5px 0;
+        line-height: 30px;
+        line-height: 3rem;
+    }
+    .month {
+        background: #AAAAAA;
+        font-size: 15px;
+        font-size: 1.5rem;
+        line-height: 15px;
+        line-height: 1.5rem;
+        padding: 2px 0 4px;
+        text-transform: uppercase;
+    }
+    .arrow {
+        border-bottom: 13px solid #AAAAAA;
+        border-right: 12px solid transparent;
+        bottom: 0;
+        position: absolute;
+        right: -10px;
+    }
+}
+
+.style-social-media {
+    .btn-social-profile {
+        background: @brand-secondary;
+        border: 0;
+        margin-right: 0.5em;
+        padding: 6px 8px;
+        .transition;
+        &:hover {
+            background: darken(@brand-secondary, 10%);
+            .transition;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        .icon {
+            color: white;
+        }
+    }
+}
+
+.style-blog-full {
+    .ds-middle {
+        .field-name-field-image {
+            padding-bottom: 1em;
+        }
+    }
+}
+.style-blog-featured {
+    .field-name-title {
+        h2 {
+            margin-top: 0;
+        }
+    }
+}
+.style-blog-teaser {
+    .field-name-title {
+        h3 {
+            margin-top: 0;
+        }
+    }
+}
+
+.style-about-author {
+    .field-name-field-description {
+        padding-bottom: 1em;
+    }
+}
+
+i.i-rounded {
+    display: inline-block;
+    background: #ddd;
+    margin: 5px;
+    .rounded(7px) !important;
+    color: #888888;
+    .font-size(7);
+    line-height: 1em;
+    padding: 0.3em 0 0;
+    text-align: center;
+    .transition(0.2s, ease, 0s);
+    top: 0px;
+    width: 1.5em !important;
+    height: 1.5em;
+    &:before, &:after {
+        display: block;
+        top: 50%;
+        margin: 0;
+        width: auto;
+    }
+}
+
+i.i-thumbnail {
+    display: inline-block;
+    background: #ddd;
+    margin: 5px;
+    color: #888888;
+    .font-size(7);
+    line-height: 1em;
+    padding: 0.3em 0 0;
+    text-align: center;
+    .transition(0.2s, ease, 0s);
+    top: 0px;
+    width: 1.5em !important;
+    height: 1.5em;
+    &:before, &:after {
+        display: block;
+        top: 50%;
+        margin: 0;
+        width: auto;
+    }
+}
+
+i.i-circle {
+    display: inline-block;
+    background: #ddd;
+    margin: 5px;
+    .rounded(50%) !important;
+    color: #888888;
+    .font-size(7);
+    line-height: 1em;
+    padding: 0.3em 0 0;
+    text-align: center;
+    .transition(0.2s, ease, 0s);
+    top: 0px;
+    width: 1.5em !important;
+    height: 1.5em;
+    &:before, &:after {
+        display: block;
+        top: 50%;
+        margin: 0;
+        width: auto;
+    }
+}
+
+// CKEditor templates
+section {
+    &.section-style-left {
+        header {
+            overflow: auto;
+            h2, h3 {
+                margin: 0 0 0.5em;
+            }
+        }
+        figure {
+          float: left;
+          padding-right: 10px;
+          figcaption {
+                .box-sizing;
+                padding: 0.5em 0;
+                text-align: left;
+            }
+        }
+    }
+    &.section-style-right {
+        header {
+            overflow: auto;
+            h2, h3 {
+                margin: 0 0 0.5em;
+            }
+        }
+        figure {
+            float: right;
+            padding-left: 10px;
+            figcaption {
+                .box-sizing;
+                padding: 0.5em 0;
+                text-align: right;
+            }
+        }
+    }
+    &.section-style {
+        width: 100%;
+        .no-wrap-left {
+            float: left;
+            padding-right: 0.5em;
+        }
+        .no-wrap-right {
+            float: right;
+            padding-left: 0.5em;
+        }
+        header {
+            overflow: auto;
+            h2, h3 {
+                margin: 0 0 0.5em;
+            }
+        }
+    }
+}

@@ -3515,6 +3515,26 @@ img {
   max-width: 100%;
   height: auto;
 }
+header {
+  min-height: 0 !important;
+}
+.nestor-main-menu {
+  padding-top: 0.75em;
+}
+.nestor-main-menu .nav > li > a {
+  padding: 23px 35px;
+}
+.stuck .nestor-main-menu .nav > li > a {
+  padding-bottom: 23px !important;
+}
+.stuck .nestor-main-menu {
+  padding-top: 0.75em !important;
+}
+#site-name h1 {
+  margin: 0.75em 0 0;
+  font-size: 30px;
+  font-size: 3rem;
+}
 .node-article > .field {
   margin-bottom: 1em;
 }
