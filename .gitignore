@@ -1,4 +1,5 @@
 # Ignore paths that contain user-generated content.
+/sites/*/*settings.php
 /sites/*/files
 /sites/*/private
 /files/*
@@ -30,7 +31,8 @@
 ######################
 .DS_Store*
 ehthumbs.db
-Icon
+Icon
+
 Thumbs.db
 ._*
 
