@@ -313,7 +313,7 @@ img {
   height: auto;
 }
 .img-circle,
-.user-profile .field-name-field-user-image img {
+.user-profile.view-mode-about_the_author .field-name-field-user-image img {
   border-radius: 50%;
 }
 hr {
