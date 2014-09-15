@@ -1,6 +1,6 @@
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="container">
-    <div class="navbar-header">
+    <div class="navbar-header <?php print $nav_logo_class; ?>">
       <?php if ($logo): ?>
       <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
@@ -21,7 +21,7 @@
     </div>
 
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-      <div class="navbar-collapse collapse">
+      <div class="navbar-collapse collapse <?php print $nav_menu_class; ?>">
         <nav role="navigation">
           <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>

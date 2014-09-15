@@ -13,7 +13,7 @@
 		<?php if (!empty($title_prefix) || !empty($title) || !empty($title_suffix)): ?>
 			<div class="page-title <?php print $title_class; ?>">
 				<div class="page-title-container <?php print $title_container; ?>">
-					<div class="page-title-inner <?php print $title_row; ?>">
+					<div class="page-title-inner">
 						<?php print render($title_prefix); ?>
 						<?php if (!empty($title)): ?>
 							<h1 class="page-header"><?php print $title; ?></h1>

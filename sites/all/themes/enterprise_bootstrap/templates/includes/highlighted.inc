@@ -24,7 +24,7 @@
 			</div>
 		<?php endif; ?>
 	<?php endif; ?>
-<?php else: ?>
+<?php elseif(!$highlighted_placement): ?>
 	<?php if ($highlighted_container): ?>
 		<?php if (!empty($page['highlighted'])): ?>
 			<div class="highlighted jumbotron">
@@ -41,5 +41,11 @@
 				</div>
 			</div>
 		<?php endif; ?>
+	<?php endif; ?>
+<?php else: ?>
+	<?php if (!empty($page['highlighted'])): ?>
+		<div class="highlighted jumbotron">
+			<?php print render($page['highlighted']); ?>
+		</div>
 	<?php endif; ?>
 <?php endif; ?>

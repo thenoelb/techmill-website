@@ -77,8 +77,11 @@
   <!-- Navigation region -->
   <?php include 'includes/navigation.inc'; ?>
 
+  <!-- Title -->
   <?php if(!$title_placement): include 'includes/title.inc'; endif; ?>
+  <!-- Top Bar (header) -->
   <?php include 'includes/header.inc'; ?>
+  <!-- Highlighted -->
   <?php if(!$highlighted_placement): include 'includes/highlighted.inc'; endif; ?>
 
   <div class="main-container container">

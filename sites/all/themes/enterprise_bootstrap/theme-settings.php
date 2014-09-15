@@ -100,6 +100,27 @@ function enterprise_bootstrap_form_system_theme_settings_alter(&$form, &$form_st
 		),
 	);
 
+	/********************* Navigation Region Settings ***********************/
+	$form['enterprise_bootstrap_region_settings']['navigation'] = array(
+		'#type' => 'fieldset',
+		'#group' => 'enterprise_bootstrap_region_settings',
+		'#title' => t('Navigation'),
+		'#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+	);
+	$form['enterprise_bootstrap_region_settings']['navigation']['nav_logo_class'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Navigation Logo Wrapper Class'),
+		'#default_value' => theme_get_setting('nav_logo_class'),
+		'#description' => t('Class that goes on the left side of the navbar, around the logo area.')
+	);
+	$form['enterprise_bootstrap_region_settings']['navigation']['nav_menu_class'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Navigation Menu Wrapper Class'),
+		'#default_value' => theme_get_setting('nav_menu_class'),
+		'#description' => t('Class that goes on the right side of the navbar, around the main menu area.')
+	);
+
 	/********************* Title Region Settings ***********************/
 	$form['enterprise_bootstrap_region_settings']['title'] = array(
 		'#type' => 'fieldset',
@@ -205,8 +226,8 @@ function enterprise_bootstrap_form_system_theme_settings_alter(&$form, &$form_st
 		'#title' => t('Footer Container'),
 		'#default_value' => theme_get_setting('footer_container'),
 		'#options' => array(
-			'container' => t('Boxed'),
-			'wide' => t('Wide'),
+			0 => t('Boxed'),
+			1 => t('Wide'),
 		),
 	);
 	$form['enterprise_bootstrap_region_settings']['footer']['footer_class'] = array(

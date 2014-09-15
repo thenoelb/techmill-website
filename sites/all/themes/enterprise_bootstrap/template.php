@@ -58,26 +58,29 @@ function enterprise_bootstrap_preprocess_page(&$variables) {
     $variables['content_column_class'] = '';
   }
 
-  // Title region options.
+  // Navifation region settings.
+  $variables['nav_logo_class'] = theme_get_setting('nav_logo_class');
+  $variables['nav_menu_class'] = theme_get_setting('nav_menu_class');
+  // Title region settings.
   $variables['title_placement'] = theme_get_setting('title_placement');
   $variables['title_container'] = theme_get_setting('title_container');
   $variables['title_row'] = ($variables['title_container'] == 'container') ? 'row' : '';
   $variables['title_class'] = theme_get_setting('title_class');
 
-  // Highlighted region options.
+  // Highlighted region settings.
   $variables['highlighted_container_front'] = theme_get_setting('highlighted_container_front');
   $variables['highlighted_placement'] = theme_get_setting('highlighted_placement');
   $variables['highlighted_container'] = theme_get_setting('highlighted_container');
   $variables['highlighted_row'] = ($variables['highlighted_container']) ? '' : 'row';
   $variables['highlighted_class'] = theme_get_setting('highlighted_class');
 
-  // Header region options.
+  // Header region settings.
   $variables['header_container_front'] = theme_get_setting('header_container_front');
   $variables['header_container'] = theme_get_setting('header_container');
   $variables['header_row'] = ($variables['header_container']) ? '' : 'row';
   $variables['header_class'] = theme_get_setting('header_class');
 
-  // Footer region options.
+  // Footer region settings.
   $variables['footer_container'] = theme_get_setting('footer_container');
   $variables['footer_class'] = theme_get_setting('footer_class');
 
@@ -97,7 +100,6 @@ function enterprise_bootstrap_preprocess_page(&$variables) {
   // Add zebra striping to front page in the content area.
   $block_striping = theme_get_setting('enterprise_bootstrap_block_striping');
   if (isset($variables['page']['content']) && drupal_is_front_page() && isset($block_striping) && $block_striping) {
-    dpm($block_striping);
     $count = (count(element_children($variables['page']['content'])));
 
     // Don't count metatags or workbench into the count.
