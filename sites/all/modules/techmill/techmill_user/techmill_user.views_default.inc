@@ -30,7 +30,8 @@ function techmill_user_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'responsive_grid';
   $handler->display->display_options['style_options']['column_classes'] = 'views-column col-md-3 col-sm-6 col-xs-12';
   $handler->display->display_options['style_options']['row_classes'] = 'views-row row-fluid';
@@ -48,6 +49,10 @@ function techmill_user_views_default_views() {
   $handler->display->display_options['row_options']['alternating_fieldset']['item_3'] = 'full';
   $handler->display->display_options['row_options']['alternating_fieldset']['item_4'] = 'full';
   $handler->display->display_options['row_options']['alternating_fieldset']['item_5'] = 'full';
+  /* Relationship: User: Content authored */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'users';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
@@ -55,11 +60,6 @@ function techmill_user_views_default_views() {
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: User: Created date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'users';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
@@ -115,9 +115,15 @@ function techmill_user_views_default_views() {
   $handler->display->display_options['row_options']['alternating_fieldset']['item_8'] = 'full';
   $handler->display->display_options['row_options']['alternating_fieldset']['item_9'] = 'full';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: User: Content authored */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'users';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['required'] = TRUE;
   $handler->display->display_options['entity_type'] = 'node';
   $handler->display->display_options['bundles'] = array(
-    0 => 'article',
+    0 => 'blog_post',
   );
   $handler->display->display_options['show_title'] = 1;
   $export['techmill_board'] = $view;

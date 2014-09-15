@@ -21,13 +21,14 @@ function techmill_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Account Settings',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'ckeditor',
-      1 => 'mollom',
-      2 => 'account',
-      3 => 'timezone',
-      4 => 'contact',
+      1 => 'googleanalytics',
+      2 => 'mollom',
+      3 => 'account',
+      4 => 'timezone',
+      5 => 'picture',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -53,12 +54,12 @@ function techmill_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Social Media',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
-      0 => 'field_user_twitter',
-      1 => 'field_user_facebook',
+      0 => 'field_user_facebook',
+      1 => 'field_user_github',
       2 => 'field_user_linkedin',
-      3 => 'field_user_github',
+      3 => 'field_user_twitter',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

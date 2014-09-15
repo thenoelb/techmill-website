@@ -14,8 +14,8 @@ function techmill_user_user_default_permissions() {
   $permissions['create field_user_title'] = array(
     'name' => 'create field_user_title',
     'roles' => array(
+      'Board Member' => 'Board Member',
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
     ),
     'module' => 'field_permissions',
   );
