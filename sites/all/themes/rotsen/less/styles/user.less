@@ -1,0 +1,42 @@
+.user-profile {
+	&.view-mode-about_the_author {
+		.field-name-name {
+			h3 {
+				margin-top: 0.5em;
+			}
+		}
+	}
+	&.view-mode-user_mini {
+		
+	}
+	.field-name-field-user-image {
+		img {
+			&:extend(.img-circle);
+		}
+	}
+	.more-link {
+		display: block;
+		margin: 1em 0;
+		width: 100%;
+	}
+	.user-social-media {
+		list-style: none;
+		margin: 1em 0;
+		padding: 0;
+		li {
+			float: left;
+		}
+	}
+}
+
+.view-techmill-board {
+	&.view-display-id-entity_view_1 {
+		border-top: 1px solid @gray-light;
+		border-bottom: 1px solid @gray-light;
+		margin: 1em 0;
+		padding: 1em 0;
+		.title {
+			margin: 0;
+		}
+	}
+}
