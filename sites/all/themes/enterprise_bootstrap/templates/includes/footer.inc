@@ -32,4 +32,4 @@
       </div>
     <?php endif; ?>
   </footer>
-<? endif; ?>
+<?php endif; ?>
