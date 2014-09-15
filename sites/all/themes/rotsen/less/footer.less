@@ -1,1 +1,70 @@
 // Insert your styling here.
+.footer {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	.footer-top {
+		background-color: @gray-lighter;
+		padding: 1em 0;
+		&, p, a, h2, h3, h4 {
+			color: @gray;
+		}
+		.block {
+			> .block-title {
+				margin-bottom: 1em;
+			}
+		}
+	}
+	.footer-bottom {
+		background-color: @gray;
+		padding: 20px 0;
+		&, p, a, h2, h3, h4 {
+			color: white;
+			font-weight: 300;
+		}	
+	}
+	.block-title {
+		.font-size(2.2);
+		font-weight: 700;
+		text-transform: uppercase;
+		padding-bottom: 0.5em;
+		.heading-underline(80px);
+	}
+	.block-menu-block {
+		.menu {
+			a {
+				&:before {
+					background-color: @gray;
+				}
+				&:hover {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+	.style-block-icon {
+		display: none;
+	}
+	.block:first-child h2.block-title {
+		margin-top: 24px;
+	}
+	.btn-social-profile {
+		background-color: @gray;
+		border: none;
+		.rounded(100%);
+		color: @gray-lighter !important;
+		display: block;
+		float: left;
+		margin: 0 5px 0.5em 0;
+		width: 35px;
+		height: 35px;
+		padding: 8px 0;
+		&:hover {
+			background-color: @brand-primary;
+		}
+		.icon.fontello {
+			line-height: 1em;
+			vertical-align: text-top;
+		}
+	}
+}

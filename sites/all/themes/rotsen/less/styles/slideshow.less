@@ -1,0 +1,46 @@
+.flexslider {
+	border: 0;
+	position: relative;
+	.flex-direction-nav {
+		a {
+			color: white;
+			height: 50px;
+		}
+	}
+	.flex-control-nav {
+		bottom: 25%;
+	}
+	.flex-control-paging {
+		li {
+			a {
+				background: rgba(255, 255, 255, 1);
+			}
+		}
+	}
+	.overlay {
+		background: rgba(0, 0, 0, 0.5);
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+	.group-slide-caption {
+		color: @brand-accent;
+		padding-top: 10em;
+		text-align: center;
+		.slide-title {
+			color: @brand-accent;
+			.font-size(4);
+			.heading-underline-center(@color:@brand-accent);
+			margin: 0;
+			padding-bottom: 20px;
+			text-shadow: 1px 1px 0 @gray-dark;
+		}
+		.slide-desc {
+			.font-size(2.2);
+			margin: 2em 0;
+			text-shadow: 1px 1px 0 @gray-dark;
+		}
+	}
+}
