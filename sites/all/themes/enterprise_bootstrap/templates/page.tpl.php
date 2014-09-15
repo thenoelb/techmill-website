@@ -86,7 +86,7 @@
 
   <div class="main-container container">
 
-  <div class="main-container-inner row">
+  <div class="main-container-inner">
     <!-- Sidebar First -->
     <?php include 'includes/sidebar_first.inc'; ?>
     <!-- /Sidebar First -->

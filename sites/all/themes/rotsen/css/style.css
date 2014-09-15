@@ -7897,6 +7897,9 @@ header#navbar .navbar-collapse .navbar-nav > li:focus a::after {
   margin-top: 2em;
   margin-bottom: 2em;
 }
+.front .main-container {
+  margin-top: 0;
+}
 .region-sidebar-first .block,
 .region-sidebar-second .block {
   margin-bottom: 24px;
