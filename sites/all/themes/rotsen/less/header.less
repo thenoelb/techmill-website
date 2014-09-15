@@ -11,13 +11,18 @@ body.navbar-is-fixed-top {
 
 header#navbar {
 	&.navbar-default {
-		background-color: white;
+		background-color: rgba(255, 255, 255, 0.9);
+		background-color: rgba(red(@brand-secondary), green(@brand-secondary), blue(@brand-secondary), 0.95);
 		border: 0;
-		.box-shadow(0 3px 1px @gray-light);
+		.box-shadow(0 10px -5px @gray-light);
 		margin-bottom: 0;
 		.logo, .name {
 			margin: 10px 0;
 			padding-right: 0;
+			font-family: "sullivanfill", @font-family-base;
+			.font-size(3.2);
+			line-height: 1em;
+			text-transform: uppercase;
 		}
 		.navbar-brand {
 			color: @brand-primary;

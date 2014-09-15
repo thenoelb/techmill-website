@@ -21,4 +21,6 @@ regions[footer_bottom]  = 'Footer bottom'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
+stylesheets[all][] = fonts/sullivan/sullivan.css
 stylesheets[all][] = css/style.css
+
