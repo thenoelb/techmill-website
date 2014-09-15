@@ -68,6 +68,8 @@ function techmill_coworkers_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Members';
   $handler->display->display_options['path'] = 'coworking';
   $handler->display->display_options['menu']['title'] = 'Coworking';
   $handler->display->display_options['menu']['weight'] = '0';
