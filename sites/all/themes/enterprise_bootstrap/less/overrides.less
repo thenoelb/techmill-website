@@ -691,3 +691,24 @@ img {
   width: 100% !important;
   height: 100% !important;
 }
+
+// Webform Components
+.webform-client-form {
+  .webform-component {
+    label {
+      display: block;
+    }
+    &.webform-container-inline {
+      label {
+        display: inline-block;
+        margin-right: 2%;
+        max-width: 20%;
+      }
+      .form-control {
+        display: inline-block;
+        margin: 0;
+        max-width: 78%;
+      }
+    }
+  }
+}
