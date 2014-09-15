@@ -7671,35 +7671,34 @@ body.navbar-is-fixed-top {
 body.navbar-is-fixed-top.admin-menu {
   padding-top: 76px !important;
 }
-header#navbar.navbar-default {
+header#navbar {
   background-color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(48, 48, 46, 0.95);
   border: 0;
-  -webkit-box-shadow: 0 10px -5px #d7d7d8;
-  -moz-box-shadow: 0 10px -5px #d7d7d8;
-  box-shadow: 0 10px -5px #d7d7d8;
+  -webkit-box-shadow: 0 -1px 5px #d7d7d8;
+  -moz-box-shadow: 0 -1px 5px #d7d7d8;
+  box-shadow: 0 -1px 5px #d7d7d8;
   margin-bottom: 0;
 }
-header#navbar.navbar-default .logo,
-header#navbar.navbar-default .name {
+header#navbar .logo,
+header#navbar .name {
   margin: 10px 0;
   padding-right: 0;
   font-family: "sullivanfill", "BLOKKNeue-Regular", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 32px;
-  font-size: 3.2rem;
-  line-height: 1em;
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 0.7em;
   text-transform: uppercase;
 }
-header#navbar.navbar-default .navbar-brand {
+header#navbar .navbar-brand {
   color: #ea9b3e;
 }
-header#navbar.navbar-default .navbar-toggle {
+header#navbar .navbar-toggle {
   border-color: #d7d7d8;
 }
-header#navbar.navbar-default .navbar-toggle .icon-bar {
+header#navbar .navbar-toggle .icon-bar {
   background-color: #d7d7d8;
 }
-header#navbar.navbar-default .navbar-nav > li > a {
+header#navbar .navbar-nav > li > a {
   background: transparent;
   color: #3f3f41;
   font-size: 14px;
@@ -7710,14 +7709,14 @@ header#navbar.navbar-default .navbar-nav > li > a {
   text-decoration: none;
   text-transform: uppercase;
 }
-header#navbar.navbar-default .navbar-nav > li > a:hover,
-header#navbar.navbar-default .navbar-nav > li > a:focus {
+header#navbar .navbar-nav > li > a:hover,
+header#navbar .navbar-nav > li > a:focus {
   background: transparent;
   color: #ea9b3e;
 }
-header#navbar.navbar-default .navbar-nav > li .active,
-header#navbar.navbar-default .navbar-nav > li .active:hover,
-header#navbar.navbar-default .navbar-nav > li .active:focus {
+header#navbar .navbar-nav > li .active,
+header#navbar .navbar-nav > li .active:hover,
+header#navbar .navbar-nav > li .active:focus {
   background: transparent;
   color: #ea9b3e;
 }
@@ -7874,6 +7873,16 @@ header#navbar .navbar-collapse .navbar-nav > li:focus a::after {
   -o-transform: translateY(10px);
   -ms-transform: translateY(10px);
   transform: translateY(10px);
+}
+header#navbar.navbar-inverse {
+  background-color: rgba(48, 48, 46, 0.95);
+  color: #ffffff;
+}
+header#navbar.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+}
+header#navbar.navbar-inverse .navbar-nav > li.active > a {
+  color: #ea9b3e;
 }
 .page-title {
   background-color: #f5f5f5;

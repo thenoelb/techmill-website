@@ -10,50 +10,47 @@ body.navbar-is-fixed-top {
 
 
 header#navbar {
-	&.navbar-default {
-		background-color: rgba(255, 255, 255, 0.9);
-		background-color: rgba(red(@brand-secondary), green(@brand-secondary), blue(@brand-secondary), 0.95);
-		border: 0;
-		.box-shadow(0 10px -5px @gray-light);
-		margin-bottom: 0;
-		.logo, .name {
-			margin: 10px 0;
-			padding-right: 0;
-			font-family: "sullivanfill", @font-family-base;
-			.font-size(3.2);
-			line-height: 1em;
-			text-transform: uppercase;
+	background-color: rgba(255, 255, 255, 0.9);
+	border: 0;
+	.box-shadow(0 -1px 5px @gray-light);
+	margin-bottom: 0;
+	.logo, .name {
+		margin: 10px 0;
+		padding-right: 0;
+		font-family: "sullivanfill", @font-family-base;
+		.font-size(3);
+		line-height: 0.7em;
+		text-transform: uppercase;
+	}
+	.navbar-brand {
+		color: @brand-primary;
+	}
+	.navbar-toggle {
+		border-color: @gray-light;
+		.icon-bar {
+			background-color: @gray-light;
 		}
-		.navbar-brand {
-			color: @brand-primary;
-		}
-		.navbar-toggle {
-			border-color: @gray-light;
-			.icon-bar {
-				background-color: @gray-light;
-			}
-		}
-		.navbar-nav {
-			& > li {
-				& > a {
+	}
+	.navbar-nav {
+		& > li {
+			& > a {
+				background: transparent;
+				color: @gray-dark;
+				.font-size(1.4);
+				font-weight: bold;
+				margin: 10px 0;
+				outline: none;
+				text-decoration: none;
+				text-transform: uppercase;
+				&:hover, &:focus {
 					background: transparent;
-					color: @gray-dark;
-					.font-size(1.4);
-					font-weight: bold;
-					margin: 10px 0;
-					outline: none;
-					text-decoration: none;
-					text-transform: uppercase;
-					&:hover, &:focus {
-						background: transparent;
-						color: @brand-primary;
-					}
+					color: @brand-primary;
 				}
-				.active {
-					&, &:hover, &:focus {
-						background: transparent;
-						color: @brand-primary;
-					}
+			}
+			.active {
+				&, &:hover, &:focus {
+					background: transparent;
+					color: @brand-primary;
 				}
 			}
 		}
@@ -148,6 +145,20 @@ header#navbar {
 						bottom: 0;
 						.transform(translateY(10px));
 					}
+				}
+			}
+		}
+	}
+	&.navbar-inverse {
+		background-color: rgba(red(@brand-secondary), green(@brand-secondary), blue(@brand-secondary), 0.95);
+		color: @brand-accent;
+		.navbar-nav > li {
+			& > a {
+				color: @brand-accent;
+			}
+			&.active {
+				& > a {
+					color: @brand-primary;
 				}
 			}
 		}
