@@ -28,3 +28,28 @@ function rotsen_form_system_theme_settings_alter(&$form, &$form_state) {
 	  );
 	}
 }
+
+
+/*
+* Create custom LESS variables
+*/
+function rotsen_less_variables() {
+  // Grab the color palette saved by the color module.
+  $color_pallete = variable_get('color_rotsen_palette', FALSE);
+  // If the color palette hasn't been saved yet, use the default.
+  if (empty($color_pallete)) {
+    $color_pallete = array(
+      'brandprimary' => '#EA9B3E',
+      'brandsecondary' => '#30302E',
+      'brandaccent' => '#FFF',
+      'brandaccent2' => '#FFF',
+      'brandaccent3' => '#FFF',
+    );
+  }
+  // Generate variables with color values.
+  foreach ($color_pallete as $key => $value) {
+    $color_pallete['@'.$key] = $color_pallete[$key];
+    unset($color_pallete[$key]);
+  }
+  return $color_pallete;
+}

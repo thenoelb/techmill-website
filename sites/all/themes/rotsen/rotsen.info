@@ -23,4 +23,5 @@ regions[footer_bottom]  = 'Footer bottom'
 
 stylesheets[all][] = fonts/sullivan/sullivan.css
 stylesheets[all][] = css/style.css
+;stylesheets[all][] = less/style.less
 
