@@ -18,7 +18,7 @@ function techmill_user_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'about_the_author';
   $ds_fieldsetting->settings = array(
     'name' => array(
-      'weight' => '0',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -263,20 +263,18 @@ function techmill_user_ds_layout_settings_info() {
   $ds_layout->layout = 'bootstrap_6_6_stacked';
   $ds_layout->settings = array(
     'regions' => array(
-      'top' => array(
-        0 => 'name',
-      ),
       'left' => array(
-        1 => 'field_user_image',
+        0 => 'field_user_image',
       ),
       'right' => array(
+        1 => 'name',
         2 => 'field_user_bio',
         3 => 'user_social_links',
       ),
     ),
     'fields' => array(
-      'name' => 'top',
       'field_user_image' => 'left',
+      'name' => 'right',
       'field_user_bio' => 'right',
       'user_social_links' => 'right',
     ),

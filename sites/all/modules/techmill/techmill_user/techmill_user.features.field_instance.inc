@@ -143,7 +143,7 @@ function techmill_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 8,
       ),
       'default' => array(
         'label' => 'above',
@@ -216,7 +216,7 @@ function techmill_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 11,
       ),
       'default' => array(
         'label' => 'above',
@@ -289,7 +289,7 @@ function techmill_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'default' => array(
         'label' => 'above',
@@ -362,7 +362,7 @@ function techmill_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 12,
       ),
       'default' => array(
         'label' => 'above',
@@ -435,7 +435,7 @@ function techmill_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 9,
       ),
       'default' => array(
         'label' => 'above',
@@ -508,7 +508,7 @@ function techmill_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'default' => array(
         'label' => 'above',
@@ -613,7 +613,7 @@ function techmill_user_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -731,7 +731,7 @@ function techmill_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'default' => array(
         'label' => 'above',
