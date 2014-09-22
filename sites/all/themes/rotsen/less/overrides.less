@@ -42,11 +42,19 @@
 				line-height: 1.5em;
 				padding: 5px 20px;
 				text-transform: uppercase;
-				&:hover {
+				&:hover, &:focus {
 					background-color: @brand-primary;
 					border: 0;
 					color: @brand-accent;
 					padding-left: 30px;
+				}
+				&.active, &.active-trail {
+					border-color: @brand-primary;
+					color: @brand-primary;
+					&:hover, &:focus {
+						background-color: @gray-lighter;
+						border-color: @brand-primary;
+					}
 				}
 			}
 		}
