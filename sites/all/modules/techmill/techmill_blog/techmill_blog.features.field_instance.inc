@@ -43,7 +43,7 @@ function techmill_blog_field_default_field_instances() {
           'trim_type' => 'chars',
         ),
         'type' => 'smart_trim_format',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'blog_micro' => array(
         'label' => 'hidden',
@@ -167,7 +167,7 @@ function techmill_blog_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'blog_micro' => array(
         'label' => 'inline',
@@ -253,7 +253,7 @@ function techmill_blog_field_default_field_instances() {
           'picture_mapping' => 'default_mini',
         ),
         'type' => 'picture',
-        'weight' => 4,
+        'weight' => 0,
       ),
       'blog_micro' => array(
         'label' => 'hidden',
@@ -372,7 +372,7 @@ function techmill_blog_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 12,
       ),
       'blog_micro' => array(
         'label' => 'hidden',

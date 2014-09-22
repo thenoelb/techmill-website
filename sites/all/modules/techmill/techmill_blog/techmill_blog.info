@@ -1,7 +1,7 @@
 name = TechMill Blog
 core = 7.x
 package = TechMill
-version = 7.x-1.0
+version = 7.x-1.1
 project = techmill_blog
 dependencies[] = ds
 dependencies[] = features

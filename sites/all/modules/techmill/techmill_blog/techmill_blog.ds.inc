@@ -18,7 +18,7 @@ function techmill_blog_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'blog_featured';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '0',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -217,33 +217,30 @@ function techmill_blog_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'blog_post';
   $ds_layout->view_mode = 'blog_featured';
-  $ds_layout->layout = 'ds_2col_fluid';
+  $ds_layout->layout = 'bootstrap_5_7';
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
-        0 => 'title',
-        1 => 'body',
-        2 => 'field_blog_categories',
+        0 => 'field_blog_featured_image',
       ),
       'right' => array(
-        3 => 'field_blog_featured_image',
+        1 => 'title',
+        2 => 'body',
+        3 => 'field_blog_categories',
       ),
     ),
     'fields' => array(
-      'title' => 'left',
-      'body' => 'left',
-      'field_blog_categories' => 'left',
-      'field_blog_featured_image' => 'right',
+      'field_blog_featured_image' => 'left',
+      'title' => 'right',
+      'body' => 'right',
+      'field_blog_categories' => 'right',
     ),
     'classes' => array(
       'layout_class' => array(
         '' => '',
       ),
       'left' => array(
-        'col-sm-7' => 'col-sm-7',
-      ),
-      'right' => array(
-        'col-sm-5' => 'col-sm-5',
+        'pull-right' => 'pull-right',
       ),
     ),
     'wrappers' => array(
