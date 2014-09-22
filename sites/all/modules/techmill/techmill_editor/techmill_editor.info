@@ -1,0 +1,14 @@
+name = TechMill Editor
+core = 7.x
+package = TechMill
+version = 7.x-1.0
+project = techmill_editor
+dependencies[] = ckeditor
+dependencies[] = ckeditor_bootstrap
+dependencies[] = ckeditor_image
+dependencies[] = media
+dependencies[] = media_wysiwyg
+features[ckeditor_profile][] = Advanced
+features[ckeditor_profile][] = CKEditor Global Profile
+features[ckeditor_profile][] = Full
+features[features_api][] = api:2
