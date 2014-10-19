@@ -25,3 +25,8 @@ stylesheets[all][] = fonts/sullivan/sullivan.css
 stylesheets[all][] = css/style.css
 ;stylesheets[all][] = less/style.less
 
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+
+scripts[] = js/rotsen.js

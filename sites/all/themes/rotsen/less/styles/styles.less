@@ -5,6 +5,15 @@
 		text-align: center;
 	}
 }
+
+.style-background-icon {
+	background-image: url(../../img/background-icon.png);
+	@media @retina {
+		background-image: url(../../img/background-icon@2x.png);
+		background-size: 200px 200px;
+	}
+}
+
 .style-block-icon {
 	.font-size(4);
 	position: relative;
@@ -144,6 +153,17 @@
 	}
 	&.brand-accent {
 		background-color: @brand-accent;
+	}
+}
+
+.style-comparison-table {
+	.product {
+		&:hover, .highlighted {
+			.box-shadow(5px 0 30px rgba(0,0,0,.5));
+			.transform(scale(1.01));		
+			position: relative;
+			z-index: 99;
+		}
 	}
 }
 

@@ -52,7 +52,16 @@ header#navbar {
 					background: transparent;
 					color: @brand-primary;
 				}
+				@media @mobile {
+					&.dropdown > .dropdown-menu {
+						display: block;
+					}
+				}
 			}
+		}
+		@media @mobile {
+			width: 100%;
+			margin: 0;
 		}
 	}
 	.dropdown-menu {
@@ -83,6 +92,14 @@ header#navbar {
 		.list-unstyled {
 			float: none;
 			width: 100% !important;
+		}
+		@media @mobile {
+			background-color: transparent;
+			position: relative;
+			width: 100%;
+			a {
+				background-color: transparent;
+			}
 		}
 	}
 	.navbar-collapse {
@@ -148,6 +165,10 @@ header#navbar {
 				}
 			}
 		}
+		@media @mobile {
+			padding: 0;
+			max-height: none;
+		}
 	}
 	&.navbar-inverse {
 		background-color: rgba(red(@brand-secondary), green(@brand-secondary), blue(@brand-secondary), 0.95);
@@ -162,6 +183,15 @@ header#navbar {
 					color: @brand-primary;
 				}
 			}
+		}
+	}
+}
+
+.container {
+	> .navbar-header, > .navbar-collapse {
+		@media @mobile {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
 		}
 	}
 }
