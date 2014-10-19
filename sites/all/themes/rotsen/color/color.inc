@@ -11,7 +11,7 @@ $info = array(
     'brandaccent' => t('Brand Accent'),
     'brandaccent2' => t('Brand Accent 2'),
     'brandaccent3' => t('Brand Accent 3'),
-  ),
+    ),
   // Pre-defined color schemes.
   'schemes' => array(
     'default' => array(
@@ -20,25 +20,25 @@ $info = array(
         'brandprimary' => '#EA9B3E',
         'brandsecondary' => '#30302E',
         'brandaccent' => '#FFFFFF',
+        ),
       ),
-    ),
     'bella_prince' => array(
       'title' => t('Prince'),
       'colors' => array(
         'brandprimary' => '#0995D8',
         'brandsecondary' => '#F5F5F5',
         'brandaccent' => '#FFFFFF',
+        ),
       ),
-    ),
     'bella_midnight' => array(
       'title' => t('Midnight'),
       'colors' => array(
         'brandprimary' => '#6E2E62',
         'brandsecondary' => '#F5F5F5',
         'brandaccent' => '#FFFFFF',
+        ),
       ),
     ),
-  ),
 
   // We aren't using any of the following, but Color will throw errors if it's missing.
   // CSS files (excluding @import) to rewrite with new color scheme.
@@ -54,8 +54,8 @@ $info = array(
       'direction' => 'vertical',
       // Keys of colors to use for the gradient.
       'colors' => array('top', 'bottom'),
+      ),
     ),
-  ),
   // Color areas to fill (x, y, width, height).
   'fill' => array(),
   // Coordinates of all the theme slices (x, y, width, height)
@@ -69,7 +69,7 @@ $info = array(
   'preview_html' => 'color/preview.html',
   // Base file for image generation.
   'base_image' => 'color/base.png',
-);
+  );
 
 
 $colourlovers_palette = variable_get('colourlovers_theme_palette', '');
@@ -94,12 +94,7 @@ if (module_exists('colourlovers') && $colourlovers_check && !empty($colourlovers
   $colourlovers_palette = _color_clean_palette($colourlovers_palette);
   $info['schemes'] = $colourlovers_palette;
 
-} elseif (!empty($kuler_colors) && $kuler_check) {
-  // Add default value in or else it borks.
-  $kuler_colors = _color_clean_palette($kuler_colors);
-  $info['schemes'] = $kuler_colors;
-
-} else {
+  } else {
   // Unset the extra color fields.
   unset($info['fields']['brandaccent2']);
   unset($info['fields']['brandaccent3']);
