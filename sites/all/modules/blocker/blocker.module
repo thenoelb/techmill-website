@@ -318,11 +318,7 @@ function blocker_form_block_admin_configure_alter(&$form, &$form_state, $form_id
  */
 function blocker_preprocess_block(&$variables, $hook) {
   $block = &$variables['block'];
-  if (isset($block->css_class)) {
-    foreach(explode(' ' , $block->css_class) as $class) {
-      if (!in_array($class, $variables['classes_array'])) {
-        $variables['classes_array'][] = $class;
-      }
-    }
+  if (isset($block->css_class) && $block->css_class != '') {
+    $variables['classes_array'] = array_merge($variables['classes_array'], explode(' ', $block->css_class));
   }
 }
