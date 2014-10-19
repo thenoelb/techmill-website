@@ -282,6 +282,27 @@ function techmill_blog_ds_custom_fields_info() {
   );
   $export['disqus_comments'] = $ds_field;
 
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'stacked_date';
+  $ds_field->label = 'Stacked Date';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => '<div class="style-date-stacked">
+  <span class="day">[node:created:custom:d]</span>
+  <span class="month">[node:created:custom:M]</span>
+</div>',
+      'format' => 'advanced_html',
+    ),
+    'use_token' => 1,
+  );
+  $export['stacked_date'] = $ds_field;
+
   return $export;
 }
 

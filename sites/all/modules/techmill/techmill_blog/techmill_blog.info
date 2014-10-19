@@ -21,6 +21,7 @@ features[ds_field_settings][] = node|blog_post|blog_micro
 features[ds_field_settings][] = node|blog_post|default
 features[ds_field_settings][] = node|blog_post|teaser
 features[ds_fields][] = disqus_comments
+features[ds_fields][] = stacked_date
 features[ds_layout_settings][] = node|blog_post|blog_featured
 features[ds_layout_settings][] = node|blog_post|blog_micro
 features[ds_layout_settings][] = node|blog_post|default
