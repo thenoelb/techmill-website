@@ -22,7 +22,7 @@ function techmill_user_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'TechMill Board';
+  $handler->display->display_options['title'] = 'The TechMill Team';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'access user profiles';
@@ -49,10 +49,6 @@ function techmill_user_views_default_views() {
   $handler->display->display_options['row_options']['alternating_fieldset']['item_3'] = 'full';
   $handler->display->display_options['row_options']['alternating_fieldset']['item_4'] = 'full';
   $handler->display->display_options['row_options']['alternating_fieldset']['item_5'] = 'full';
-  /* Relationship: User: Content authored */
-  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
-  $handler->display->display_options['relationships']['uid']['table'] = 'users';
-  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
@@ -77,13 +73,14 @@ function techmill_user_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'board-members';
+  $handler->display->display_options['enabled'] = FALSE;
+  $handler->display->display_options['path'] = 'about/the-team';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
   $handler->display->display_options['pager']['options']['offset'] = '0';
 
   /* Display: EVA Field */

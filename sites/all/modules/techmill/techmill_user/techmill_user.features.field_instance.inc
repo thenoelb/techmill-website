@@ -103,7 +103,7 @@ function techmill_user_field_default_field_instances() {
           'summary_handler' => 'full',
           'trim_length' => 300,
           'trim_options' => array(
-            'text' => 'text',
+            'text' => 0,
           ),
           'trim_suffix' => '...',
           'trim_type' => 'chars',
