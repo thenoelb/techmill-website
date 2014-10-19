@@ -110,11 +110,91 @@ function techmill_blog_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|blog_post|default';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'blog_post';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'disqus_comments' => array(
+      'weight' => '5',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'body' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
+    'field_blog_featured_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
+    'field_blog_tags' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
+    'field_blog_categories' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
+  );
+  $export['node|blog_post|default'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|blog_post|teaser';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'blog_post';
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
+    'stacked_date' => array(
+      'weight' => '2',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
     'title' => array(
       'weight' => '1',
       'label' => 'hidden',
@@ -140,10 +220,10 @@ function techmill_blog_ds_field_settings_info() {
         ),
       ),
     ),
-    'submitted_by' => array(
-      'weight' => '2',
-      'label' => 'hidden',
-      'format' => 'ds_post_date_medium',
+    'author' => array(
+      'weight' => '3',
+      'label' => 'inline',
+      'format' => 'author_linked',
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_minimal',
@@ -333,27 +413,38 @@ function techmill_blog_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'blog_post';
   $ds_layout->view_mode = 'teaser';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'ds_2col_stacked';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
+      'header' => array(
         0 => 'field_blog_featured_image',
         1 => 'title',
-        2 => 'submitted_by',
-        3 => 'body',
+      ),
+      'left' => array(
+        2 => 'stacked_date',
+      ),
+      'right' => array(
+        3 => 'author',
+        4 => 'body',
       ),
     ),
     'fields' => array(
-      'field_blog_featured_image' => 'ds_content',
-      'title' => 'ds_content',
-      'submitted_by' => 'ds_content',
-      'body' => 'ds_content',
+      'field_blog_featured_image' => 'header',
+      'title' => 'header',
+      'stacked_date' => 'left',
+      'author' => 'right',
+      'body' => 'right',
     ),
     'classes' => array(
-      'layout_class' => array(),
+      'layout_class' => array(
+        'well' => 'well',
+      ),
     ),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'header' => 'div',
+      'left' => 'div',
+      'right' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

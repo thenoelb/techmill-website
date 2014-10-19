@@ -70,8 +70,8 @@ function techmill_blog_views_default_views() {
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'responsive_grid';
   $handler->display->display_options['style_options']['columns'] = '2';
-  $handler->display->display_options['style_options']['column_classes'] = 'views-column col-sm-6';
-  $handler->display->display_options['style_options']['row_classes'] = 'views-row row-fluid';
+  $handler->display->display_options['style_options']['column_classes'] = 'views-column col-xs-12 col-md-6';
+  $handler->display->display_options['style_options']['row_classes'] = 'views-row row';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
