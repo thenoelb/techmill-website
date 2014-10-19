@@ -1,16 +1,32 @@
 .node-blog-post {
+	.more-link {
+		display: block;
+		margin: 1em 0;
+		width: 100%;
+	}
 	&.view-mode-full {
 		.field-name-field-blog-featured-image {
 			margin-bottom: 2em;
 		}
 	}
 	&.node-teaser {
-		
-	}
-	.more-link {
-		display: block;
-		margin: 1em 0;
-		width: 100%;
+		.field-name-title {
+			h2, h3 {
+				margin-top: 0;
+			}
+		}
+		.field-name-author {
+			margin-bottom: 1em;
+		}
+		.group-left {
+			width: 20%;
+		}
+		.group-right {
+			width: 80%;
+		}
+		.more-link {
+			margin-bottom: 0;
+		}
 	}
 }
 
