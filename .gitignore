@@ -26,6 +26,8 @@
 ######################
 *.log
 *.sql
+# Ignore configuration files that may contain sensitive information.
+sites/*/settings*.php
 
 # OS generated files #
 ######################
@@ -44,3 +46,6 @@ Thumbs.db
 ##########
 .sass-cache
 config.codekit
+# Ignore paths that contain user-generated content.
+sites/*/files
+sites/*/private
