@@ -27,7 +27,6 @@
 	}
 	.group-slide-caption {
 		color: @brand-accent;
-		padding-top: 10em;
 		text-align: center;
 		.slide-title {
 			color: @brand-accent;
@@ -42,5 +41,36 @@
 			margin: 2em 0;
 			text-shadow: 1px 1px 0 @gray-dark;
 		}
+		@media @normal, @wide {
+			padding-top: 10em;
+			.slide-title {
+				.font-size(4);
+			}
+			.slide-desc {
+				.font-size(2.2);
+			}
+		}
+		@media @tablet {
+			padding-top: 6em;
+			.slide-title {
+				.font-size(3.2);
+			}
+			.slide-desc {
+				.font-size(2);
+			}
+		}
+		@media @mobile {
+			padding-top: 2em;
+			.slide-title {
+				.font-size(2.6);
+			}
+			.slide-desc {
+				.font-size(1.6);
+			}
+			.btn {
+				display: none;
+			}
+		}
+		
 	}
 }
