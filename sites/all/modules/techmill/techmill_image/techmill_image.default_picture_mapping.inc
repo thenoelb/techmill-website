@@ -172,31 +172,31 @@ function techmill_image_default_picture_mapping() {
     'custom.user.md' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => '1000x250',
+        'image_style' => '1000x600',
       ),
       '2x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => '1000x250_retina',
+        'image_style' => '1000x600_retina',
       ),
     ),
     'custom.user.sm' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => '800x200',
+        'image_style' => '800x480',
       ),
       '2x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => '800x200_retina',
+        'image_style' => '800x480_retina',
       ),
     ),
     'custom.user.xs' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => '600x150',
+        'image_style' => '600x360',
       ),
       '2x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => '600x150_retina',
+        'image_style' => '600x360_retina',
       ),
     ),
   );
