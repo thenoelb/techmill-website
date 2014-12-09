@@ -1,0 +1,53 @@
+.node-initiative {
+	&.view-mode-initiative_tile {
+		position: relative;
+		.field-name-title {
+			background-color: rgba(red(@brand-primary), green(@brand-primary), blue(@brand-primary), 0.85);
+			color: white;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding: 0 1em;
+			h2, a {
+				color: white;
+			}
+		}
+		.overlay {
+			display: none;
+		}
+		&:hover {
+			.overlay {
+				display: block;
+				position: absolute;
+				top:0;
+				left:0;
+				right:0;
+				bottom:0;
+				padding: 1em;
+				background-color: rgba(0, 0, 0, 0.65);
+				color: white;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+.view-initiatives {
+	overflow: auto;
+	width: 100%;
+	&.view-display-id-block {
+		.views-content {
+			margin: 0 auto;
+		}
+		.views-row {
+			width: 270px;
+			height: 270px;
+			float: left;
+			margin: 0 10px 10px 0;
+		}
+		.views-row-first, .views-row-last {
+			height: 550px;
+			width: 550px;
+		}
+	}
+}
