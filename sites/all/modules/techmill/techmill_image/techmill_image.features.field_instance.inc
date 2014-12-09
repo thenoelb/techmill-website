@@ -86,6 +86,7 @@ function techmill_image_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'class' => '',
           'image_link' => '',
           'image_style' => '525x350',
           'linked_field' => array(

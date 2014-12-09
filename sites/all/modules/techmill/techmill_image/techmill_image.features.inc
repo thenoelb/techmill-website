@@ -68,7 +68,7 @@ function techmill_image_image_default_styles() {
     'name' => '1000x250_retina',
     'label' => '1000x250 Retina',
     'effects' => array(
-      18 => array(
+      44 => array(
         'label' => 'Scale',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
         'effect callback' => 'retina_images_image_scale_effect',
@@ -85,7 +85,7 @@ function techmill_image_image_default_styles() {
         ),
         'weight' => -10,
       ),
-      19 => array(
+      45 => array(
         'label' => 'Crop',
         'help' => 'Cropping will remove portions of an image to make it the specified dimensions.',
         'effect callback' => 'retina_images_image_crop_effect',
@@ -312,39 +312,21 @@ function techmill_image_image_default_styles() {
     'name' => '1200x400_retina',
     'label' => '1200x400 Retina',
     'effects' => array(
-      24 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'retina_images_image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'retina_images_image_scale_form',
-        'summary theme' => 'retina_images_image_scale_summary',
-        'module' => 'image',
-        'name' => 'image_scale',
-        'data' => array(
-          'width' => 1200,
-          'height' => '',
-          'upscale' => 1,
-          'retinafy' => 1,
-        ),
-        'weight' => 1,
-      ),
-      25 => array(
-        'label' => 'Crop',
-        'help' => 'Cropping will remove portions of an image to make it the specified dimensions.',
-        'effect callback' => 'retina_images_image_crop_effect',
+      42 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'retina_images_image_scale_and_crop_effect',
         'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'retina_images_image_crop_form',
-        'summary theme' => 'retina_images_image_crop_summary',
+        'form callback' => 'retina_images_image_resize_form',
+        'summary theme' => 'retina_images_image_resize_summary',
         'module' => 'image',
-        'name' => 'image_crop',
+        'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 1200,
           'height' => 400,
-          'anchor' => 'center-center',
           'retinafy' => 1,
         ),
-        'weight' => 2,
+        'weight' => 3,
       ),
     ),
   );
@@ -1038,6 +1020,78 @@ function techmill_image_image_default_styles() {
         'data' => array(
           'width' => 975,
           'height' => 650,
+          'retinafy' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: large_square.
+  $styles['large_square'] = array(
+    'name' => 'large_square',
+    'label' => 'Large Square (600x600)',
+    'effects' => array(
+      46 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'retina_images_image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'retina_images_image_resize_form',
+        'summary theme' => 'retina_images_image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 600,
+          'height' => 600,
+          'retinafy' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: medium_square_220x220.
+  $styles['medium_square_220x220'] = array(
+    'name' => 'medium_square_220x220',
+    'label' => 'Medium Square (220x220)',
+    'effects' => array(
+      39 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'retina_images_image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'retina_images_image_resize_form',
+        'summary theme' => 'retina_images_image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 220,
+          'height' => 220,
+          'retinafy' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: user_square.
+  $styles['user_square'] = array(
+    'name' => 'user_square',
+    'label' => 'User Square',
+    'effects' => array(
+      43 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'retina_images_image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'retina_images_image_resize_form',
+        'summary theme' => 'retina_images_image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 250,
+          'height' => 250,
           'retinafy' => 0,
         ),
         'weight' => 1,

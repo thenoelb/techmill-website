@@ -334,6 +334,7 @@ function techmill_coworkers_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'class' => '',
           'image_link' => '',
           'image_style' => '720x480',
           'linked_field' => array(
@@ -355,6 +356,7 @@ function techmill_coworkers_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'class' => '',
           'image_link' => 'content',
           'image_style' => '720x480',
           'linked_field' => array(

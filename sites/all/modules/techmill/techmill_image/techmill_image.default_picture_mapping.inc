@@ -115,8 +115,7 @@ function techmill_image_default_picture_mapping() {
         'image_style' => '1200xh',
       ),
       '2x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => '1200xh_retina',
+        'mapping_type' => '_none',
       ),
     ),
     'custom.user.md' => array(
@@ -125,8 +124,7 @@ function techmill_image_default_picture_mapping() {
         'image_style' => '1000xh',
       ),
       '2x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => '1000xh_retina',
+        'mapping_type' => '_none',
       ),
     ),
     'custom.user.sm' => array(
@@ -135,8 +133,7 @@ function techmill_image_default_picture_mapping() {
         'image_style' => '800xh',
       ),
       '2x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => '800xh_retina',
+        'mapping_type' => '_none',
       ),
     ),
     'custom.user.xs' => array(
@@ -145,8 +142,7 @@ function techmill_image_default_picture_mapping() {
         'image_style' => '600xh',
       ),
       '2x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => '600xh_retina',
+        'mapping_type' => '_none',
       ),
     ),
   );
@@ -165,8 +161,7 @@ function techmill_image_default_picture_mapping() {
         'image_style' => '1200x400',
       ),
       '2x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => '1200x400_retina',
+        'mapping_type' => '_none',
       ),
     ),
     'custom.user.md' => array(
@@ -175,8 +170,7 @@ function techmill_image_default_picture_mapping() {
         'image_style' => '1000x600',
       ),
       '2x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => '1000x600_retina',
+        'mapping_type' => '_none',
       ),
     ),
     'custom.user.sm' => array(
@@ -185,8 +179,7 @@ function techmill_image_default_picture_mapping() {
         'image_style' => '800x480',
       ),
       '2x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => '800x480_retina',
+        'mapping_type' => '_none',
       ),
     ),
     'custom.user.xs' => array(
@@ -195,8 +188,7 @@ function techmill_image_default_picture_mapping() {
         'image_style' => '600x360',
       ),
       '2x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => '600x360_retina',
+        'mapping_type' => '_none',
       ),
     ),
   );
@@ -215,8 +207,7 @@ function techmill_image_default_picture_mapping() {
         'image_style' => '1200x600',
       ),
       '2x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => '1200x600_retina',
+        'mapping_type' => '_none',
       ),
     ),
     'custom.user.md' => array(
@@ -225,8 +216,7 @@ function techmill_image_default_picture_mapping() {
         'image_style' => '1000x500',
       ),
       '2x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => '1000x500_retina',
+        'mapping_type' => '_none',
       ),
     ),
     'custom.user.sm' => array(
@@ -235,8 +225,7 @@ function techmill_image_default_picture_mapping() {
         'image_style' => '800x400',
       ),
       '2x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => '800x400_retina',
+        'mapping_type' => '_none',
       ),
     ),
     'custom.user.xs' => array(
@@ -245,8 +234,7 @@ function techmill_image_default_picture_mapping() {
         'image_style' => '600x300',
       ),
       '2x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => '600x300_retina',
+        'mapping_type' => '_none',
       ),
     ),
   );
