@@ -18,41 +18,38 @@ function feeds_meetup_ctools_plugin_api($owner, $api) {
  * Implements hook_feeds_plugins().
  */
 function feeds_meetup_feeds_plugins() {
-  $info = array();
-  $info['FeedsMeetupEventParser'] = array(
-    'name' => 'Meetup parser: Events',
-    'description' => 'Parse Meetup event feeds.',
-    'help' => 'Parse Meetup event XML feeds using XPath.',
-    'handler' => array(
-      'parent' => 'FeedsMeetupParserBase',
-      'class' => 'FeedsMeetupEventParser',
-      'file' => 'FeedsMeetupEventParser.inc',
-      'path' => drupal_get_path('module', 'feeds_meetup'),
+  return array(
+    'FeedsMeetupEventParser' => array(
+      'name' => t('Meetup parser: Events'),
+      'description' => t('Parse Meetup event feeds.'),
+      'help' => t('Parse Meetup event XML feeds using XPath.'),
+      'handler' => array(
+        'parent' => 'FeedsParser',
+        'class' => 'FeedsMeetupEventParser',
+        'file' => 'FeedsMeetupEventParser.inc',
+      ),
+    ),
+    'FeedsMeetupGroupParser' => array(
+      'name' => t('Meetup parser: Groups'),
+      'description' => t('Parse Meetup group feeds.'),
+      'help' => t('Parse Meetup group XML feeds using XPath.'),
+      'handler' => array(
+        'parent' => 'FeedsParser',
+        'class' => 'FeedsMeetupGroupParser',
+        'file' => 'FeedsMeetupGroupParser.inc',
+      ),
+    ),
+    'FeedsMeetupVenueParser' => array(
+      'name' => t('Meetup parser: Venues'),
+      'description' => t('Parse Meetup venue feeds.'),
+      'help' => t('Parse Meetup venue XML feeds using XPath.'),
+      'handler' => array(
+        'parent' => 'FeedsParser',
+        'class' => 'FeedsMeetupVenueParser',
+        'file' => 'FeedsMeetupVenueParser.inc',
+      ),
     ),
   );
-  $info['FeedsMeetupGroupParser'] = array(
-    'name' => 'Meetup parser: Groups',
-    'description' => 'Parse Meetup group feeds.',
-    'help' => 'Parse Meetup group XML feeds using XPath.',
-    'handler' => array(
-      'parent' => 'FeedsMeetupParserBase',
-      'class' => 'FeedsMeetupGroupParser',
-      'file' => 'FeedsMeetupGroupParser.inc',
-      'path' => drupal_get_path('module', 'feeds_meetup'),
-    ),
-  );
-  $info['FeedsMeetupVenueParser'] = array(
-    'name' => 'Meetup parser: Venues',
-    'description' => 'Parse Meetup venue feeds.',
-    'help' => 'Parse Meetup venue XML feeds using XPath.',
-    'handler' => array(
-      'parent' => 'FeedsMeetupParserBase',
-      'class' => 'FeedsMeetupVenueParser',
-      'file' => 'FeedsMeetupVenueParser.inc',
-      'path' => drupal_get_path('module', 'feeds_meetup'),
-    ),
-  );
-  return $info;
 }
 
 /**
