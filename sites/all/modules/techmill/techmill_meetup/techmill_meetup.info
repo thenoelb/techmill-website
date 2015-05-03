@@ -12,6 +12,7 @@ dependencies[] = ds
 dependencies[] = fe_date
 dependencies[] = features
 dependencies[] = feeds
+dependencies[] = feeds_meetup
 dependencies[] = feeds_tamper
 dependencies[] = field_group
 dependencies[] = geofield
