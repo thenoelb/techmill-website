@@ -95,7 +95,7 @@ function retina_images_form_helper(&$form, $data) {
     '#type' => 'checkbox',
     '#default_value' => (isset($data['retinafy'])) ? $data['retinafy'] : 0,
     '#title' => t('Retinafy'),
-    '#description' => t('Scale and output this image with increased resolution. It is recommended to allow upscaling with this option and set image quality to 25.'),
+    '#description' => t('Scale and output this image with increased resolution. It is recommended to allow upscaling with this option and set image qualtiy to 25.'),
   );
 }
 
@@ -254,6 +254,7 @@ function retina_images_image_default_styles() {
   $styles = array();
 
   $styles['thumbnail_retina'] = array(
+    'label' => 'Thumbnail (100x100 retinafied)',
     'effects' => array(
       array(
         'name' => 'image_scale',
@@ -264,6 +265,7 @@ function retina_images_image_default_styles() {
   );
 
   $styles['medium_retina'] = array(
+    'label' => 'Medium (220x220 retinafied)',
     'effects' => array(
       array(
         'name' => 'image_scale',
@@ -274,6 +276,7 @@ function retina_images_image_default_styles() {
   );
 
   $styles['large_retina'] = array(
+    'label' => 'Large (480x480 retinafied)',
     'effects' => array(
       array(
         'name' => 'image_scale',
@@ -298,7 +301,7 @@ function retina_images_image_default_styles() {
 function theme_retina_images_image_scale_summary($variables) {
   $data = $variables['data'];
 
-  $retinafied = isset($data['retinafy']) ? $data['retinafy'] : FALSE;
+  $retinafied =  isset($data['retinafy']) ? $data['retinafy'] : FALSE;
   return theme('image_scale_summary', $variables) . ' ' . ($retinafied ? '(' . t('retinafied') . ')' : '');
 }
 
@@ -313,8 +316,8 @@ function theme_retina_images_image_scale_summary($variables) {
  */
 function theme_retina_images_image_resize_summary($variables) {
   $data = $variables['data'];
-  
-  $retinafied = isset($data['retinafy']) ? $data['retinafy'] : FALSE;
+
+  $retinafied =  isset($data['retinafy']) ? $data['retinafy'] : FALSE;
   return theme('image_resize_summary', $variables) . ' ' . ($retinafied ? '(' . t('retinafied') . ')' : '');
 }
 
@@ -330,7 +333,7 @@ function theme_retina_images_image_resize_summary($variables) {
 function theme_retina_images_image_crop_summary($variables) {
   $data = $variables['data'];
 
-  $retinafied = isset($data['retinafy']) ? $data['retinafy'] : FALSE;
+  $retinafied =  isset($data['retinafy']) ? $data['retinafy'] : FALSE;
   return theme('image_crop_summary', $variables) . ' ' . ($retinafied ? '(' . t('retinafied') . ')' : '');
 }
 
