@@ -9,7 +9,6 @@ dependencies[] = ctools
 dependencies[] = date
 dependencies[] = date_views
 dependencies[] = ds
-dependencies[] = fe_date
 dependencies[] = features
 dependencies[] = feeds
 dependencies[] = feeds_meetup
