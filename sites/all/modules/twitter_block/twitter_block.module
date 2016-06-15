@@ -514,13 +514,6 @@ function twitter_block_cache($sync_cached_file = FALSE) {
   $path = 'public://twitter_block';
   $file_destination = $path . '/' . basename($location);
 
-  // Attempt to find a local relative destination using the appropriate wrapper.
-  if ($wrapper = file_stream_wrapper_get_instance_by_uri($file_destination)) {
-    if ($wrapper instanceof DrupalLocalStreamWrapper) {
-      $local_file_destination = $wrapper->getDirectoryPath() . '/' . file_uri_target($file_destination);
-    }
-  }
-
   if (!file_exists($file_destination) || $sync_cached_file) {
     // Download the latest widget code.
     $result = drupal_http_request($location);
@@ -548,15 +541,15 @@ function twitter_block_cache($sync_cached_file = FALSE) {
           file_unmanaged_save_data($result->data, $file_destination, FILE_EXISTS_REPLACE);
           watchdog('twitter_block', 'Locally cached widget code file has been saved.', array(), WATCHDOG_INFO);
 
-          // Return the local JS file path if a stream wrapper was found, otherwise return file_create_url.
-          return !empty($local_file_destination) ? $local_file_destination : file_create_url($file_destination);
+          // Return the local JS file path.
+          return file_create_url($file_destination);
         }
       }
     }
   }
   else {
-    // Return the local JS file path if a stream wrapper was found, otherwise return file_create_url.
-    return !empty($local_file_destination) ? $local_file_destination : file_create_url($file_destination);
+    // Return the local JS file path.
+    return file_create_url($file_destination);
   }
 }
 
