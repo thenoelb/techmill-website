@@ -3055,3 +3055,14 @@ body.adminimal-skin-alternative.adminimal-theme.page-admin-structure-features #e
 .fpa-container .dummy-checkbox {
   display: none !important;
 }
+
+/* Fix Views Responsive Grid module see #2680767 */
+body.page-admin-structure-views-view #views-ui-edit-display-form #edit-options input.form-text {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+  -webkit-padding-end: 8px;
+}
