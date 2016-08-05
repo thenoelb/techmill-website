@@ -10,7 +10,7 @@
 function techmill_user_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'user-user-field_user_bio'
+  // Exported field_instance: 'user-user-field_user_bio'.
   $field_instances['user-user-field_user_bio'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -36,9 +36,11 @@ function techmill_user_field_default_field_instances() {
           'more_text' => 'Read more',
           'summary_handler' => 'full',
           'trim_length' => 300,
+          'trim_link' => FALSE,
           'trim_options' => array(
             'text' => 'text',
           ),
+          'trim_preserve_tags' => '',
           'trim_suffix' => '...',
           'trim_type' => 'chars',
         ),
@@ -81,7 +83,7 @@ function techmill_user_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'user_mini' => array(
         'label' => 'hidden',
@@ -102,9 +104,11 @@ function techmill_user_field_default_field_instances() {
           'more_text' => 'Read more',
           'summary_handler' => 'full',
           'trim_length' => 300,
+          'trim_link' => FALSE,
           'trim_options' => array(
             'text' => 0,
           ),
+          'trim_preserve_tags' => '',
           'trim_suffix' => '...',
           'trim_type' => 'chars',
         ),
@@ -132,7 +136,7 @@ function techmill_user_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_facebook'
+  // Exported field_instance: 'user-user-field_user_facebook'.
   $field_instances['user-user-field_user_facebook'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -155,7 +159,7 @@ function techmill_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 8,
       ),
       'user_mini' => array(
         'label' => 'above',
@@ -205,7 +209,7 @@ function techmill_user_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_first_name'
+  // Exported field_instance: 'user-user-field_user_first_name'.
   $field_instances['user-user-field_user_first_name'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -228,7 +232,7 @@ function techmill_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 11,
       ),
       'user_mini' => array(
         'label' => 'above',
@@ -278,7 +282,7 @@ function techmill_user_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_github'
+  // Exported field_instance: 'user-user-field_user_github'.
   $field_instances['user-user-field_user_github'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -301,7 +305,7 @@ function techmill_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'user_mini' => array(
         'label' => 'above',
@@ -351,7 +355,7 @@ function techmill_user_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_last_name'
+  // Exported field_instance: 'user-user-field_user_last_name'.
   $field_instances['user-user-field_user_last_name'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -374,7 +378,7 @@ function techmill_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 12,
       ),
       'user_mini' => array(
         'label' => 'above',
@@ -424,7 +428,7 @@ function techmill_user_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_linkedin'
+  // Exported field_instance: 'user-user-field_user_linkedin'.
   $field_instances['user-user-field_user_linkedin'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -447,7 +451,7 @@ function techmill_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 9,
       ),
       'user_mini' => array(
         'label' => 'above',
@@ -497,7 +501,7 @@ function techmill_user_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_tag_line'
+  // Exported field_instance: 'user-user-field_user_tag_line'.
   $field_instances['user-user-field_user_tag_line'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -562,34 +566,8 @@ function techmill_user_field_default_field_instances() {
     'required' => 0,
     'rubik_edit_field_display' => 'default',
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'advanced_html' => 'advanced_html',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'advanced_html' => array(
-              'weight' => 0,
-            ),
-            'filtered_html' => array(
-              'weight' => -9,
-            ),
-            'full_html' => array(
-              'weight' => -10,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-          ),
-        ),
-      ),
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -602,7 +580,7 @@ function techmill_user_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_title'
+  // Exported field_instance: 'user-user-field_user_title'.
   $field_instances['user-user-field_user_title'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -720,7 +698,7 @@ function techmill_user_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_twitter'
+  // Exported field_instance: 'user-user-field_user_twitter'.
   $field_instances['user-user-field_user_twitter'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -743,7 +721,7 @@ function techmill_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'user_mini' => array(
         'label' => 'above',

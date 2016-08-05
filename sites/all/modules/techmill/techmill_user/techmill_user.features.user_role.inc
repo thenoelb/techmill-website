@@ -16,5 +16,11 @@ function techmill_user_user_default_roles() {
     'weight' => 3,
   );
 
+  // Exported role: Content Editor.
+  $roles['Content Editor'] = array(
+    'name' => 'Content Editor',
+    'weight' => 4,
+  );
+
   return $roles;
 }

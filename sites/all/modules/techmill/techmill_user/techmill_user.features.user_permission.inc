@@ -14,8 +14,8 @@ function techmill_user_user_default_permissions() {
   $permissions['create field_user_title'] = array(
     'name' => 'create field_user_title',
     'roles' => array(
+      'Administrator' => 'Administrator',
       'Board Member' => 'Board Member',
-      'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
   );
@@ -24,7 +24,7 @@ function techmill_user_user_default_permissions() {
   $permissions['edit field_user_title'] = array(
     'name' => 'edit field_user_title',
     'roles' => array(
-      'administrator' => 'administrator',
+      'Administrator' => 'Administrator',
     ),
     'module' => 'field_permissions',
   );
@@ -33,8 +33,8 @@ function techmill_user_user_default_permissions() {
   $permissions['edit own field_user_title'] = array(
     'name' => 'edit own field_user_title',
     'roles' => array(
+      'Administrator' => 'Administrator',
       'Board Member' => 'Board Member',
-      'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
   );
@@ -43,7 +43,7 @@ function techmill_user_user_default_permissions() {
   $permissions['view field_user_title'] = array(
     'name' => 'view field_user_title',
     'roles' => array(
-      'administrator' => 'administrator',
+      'Administrator' => 'Administrator',
     ),
     'module' => 'field_permissions',
   );
@@ -52,8 +52,8 @@ function techmill_user_user_default_permissions() {
   $permissions['view own field_user_title'] = array(
     'name' => 'view own field_user_title',
     'roles' => array(
+      'Administrator' => 'Administrator',
       'Board Member' => 'Board Member',
-      'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
   );

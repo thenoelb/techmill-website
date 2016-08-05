@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function techmill_user_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -41,7 +41,7 @@ function techmill_user_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_account_settings|user|user|form'] = $field_group;
+  $field_groups['group_account_settings|user|user|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -72,7 +72,7 @@ function techmill_user_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_social_media|user|user|form'] = $field_group;
+  $field_groups['group_social_media|user|user|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -105,7 +105,13 @@ function techmill_user_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_username_title|user|user|default'] = $field_group;
+  $field_groups['group_username_title|user|user|default'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Account Settings');
+  t('Social Media');
+  t('Username Title');
+
+  return $field_groups;
 }

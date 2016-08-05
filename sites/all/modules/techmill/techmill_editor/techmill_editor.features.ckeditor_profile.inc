@@ -105,7 +105,8 @@ function techmill_editor_ckeditor_profile_defaults() {
     [\'Templates\',\'Source\'],
     [\'Cut\',\'Copy\',\'Paste\',\'PasteText\',\'PasteFromWord\',\'-\'],
     [\'Replace\',\'-\'],
-    [\'EnhancedImage\',\'Media\',\'Table\',\'HorizontalRule\'],
+    [\'Image\',\'Media\',\'video_filter\',\'MediaEmbed\'],
+    [\'Table\',\'HorizontalRule\'],
     \'/\',
     [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'-\',\'Subscript\',\'Superscript\',\'-\',\'RemoveFormat\'],
     [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\',\'Blockquote\',\'CreateDiv\'],
@@ -216,6 +217,18 @@ function techmill_editor_ckeditor_profile_defaults() {
             ),
             'default' => 'f',
           ),
+          'mediaBrowser' => array(
+            'name' => 'mediaBrowser',
+            'desc' => 'Media Browser for File Upload/Browsing',
+            'path' => '/sites/all/modules/ckeditor_media/plugins/mediaBrowser/',
+          ),
+          'picture_ckeditor' => array(
+            'name' => 'picture_ckeditor',
+            'desc' => 'Support responsive images with the Picture module.',
+            'buttons' => FALSE,
+            'path' => '%base_path%sites/all/modules/picture/ckeditor/plugins/',
+            'default' => 't',
+          ),
           'trifold' => array(
             'name' => 'trifold',
             'desc' => 'Bootstrap Trifold Plugin',
@@ -224,6 +237,17 @@ function techmill_editor_ckeditor_profile_defaults() {
               'Trifold' => array(
                 'label' => 'Trifold',
                 'icon' => 'icons/trifold.png',
+              ),
+            ),
+          ),
+          'video_filter' => array(
+            'name' => 'video_filter',
+            'desc' => 'Plugin to directly embed videos with the video filter module.',
+            'path' => '%base_path%sites/all/modules/video_filter/editors/ckeditor/',
+            'buttons' => array(
+              'video_filter' => array(
+                'label' => 'Video filter',
+                'icon' => 'video_filter.png',
               ),
             ),
           ),

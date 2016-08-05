@@ -161,12 +161,23 @@ function techmill_user_ds_field_settings_info() {
       ),
     ),
     'user_social_links' => array(
-      'weight' => '3',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_minimal',
+        ),
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
         ),
       ),
     ),
@@ -372,8 +383,8 @@ function techmill_user_ds_layout_settings_info() {
         0 => 'name',
         1 => 'field_user_title',
         2 => 'field_user_tag_line',
-        3 => 'user_social_links',
-        4 => 'field_user_bio',
+        3 => 'field_user_bio',
+        4 => 'user_social_links',
       ),
       'right' => array(
         5 => 'field_user_image',
@@ -383,8 +394,8 @@ function techmill_user_ds_layout_settings_info() {
       'name' => 'left',
       'field_user_title' => 'left',
       'field_user_tag_line' => 'left',
-      'user_social_links' => 'left',
       'field_user_bio' => 'left',
+      'user_social_links' => 'left',
       'field_user_image' => 'right',
     ),
     'classes' => array(
@@ -403,6 +414,7 @@ function techmill_user_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => 0,
     'hide_page_title' => '1',
     'page_option_title' => '',
   );
