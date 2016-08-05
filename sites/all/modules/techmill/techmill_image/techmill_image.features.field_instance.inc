@@ -10,7 +10,7 @@
 function techmill_image_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'bean-image_block-field_image_body'
+  // Exported field_instance: 'bean-image_block-field_image_body'.
   $field_instances['bean-image_block-field_image_body'] = array(
     'bundle' => 'image_block',
     'default_value' => NULL,
@@ -76,7 +76,7 @@ function techmill_image_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-image_block-field_image_img'
+  // Exported field_instance: 'bean-image_block-field_image_img'.
   $field_instances['bean-image_block-field_image_img'] = array(
     'bundle' => 'image_block',
     'deleted' => 0,
@@ -118,6 +118,8 @@ function techmill_image_field_default_field_instances() {
           ),
           'fallback_image_style' => '',
           'image_link' => '',
+          'lazyload' => '',
+          'lazyload_aspect_ratio' => '',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -163,7 +165,7 @@ function techmill_image_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-image_block-field_image_title'
+  // Exported field_instance: 'bean-image_block-field_image_title'.
   $field_instances['bean-image_block-field_image_title'] = array(
     'bundle' => 'image_block',
     'default_value' => NULL,

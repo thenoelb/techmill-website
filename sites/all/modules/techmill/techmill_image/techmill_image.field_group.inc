@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function techmill_image_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -41,7 +41,11 @@ function techmill_image_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_image_caption|bean|image_block|image_wide'] = $field_group;
+  $field_groups['group_image_caption|bean|image_block|image_wide'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Caption');
+
+  return $field_groups;
 }

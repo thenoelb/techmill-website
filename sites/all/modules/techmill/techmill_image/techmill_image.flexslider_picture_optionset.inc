@@ -15,7 +15,8 @@ function techmill_image_default_flexslider_picture_optionset() {
   $flexslider_picture_optionset->api_version = 1;
   $flexslider_picture_optionset->flexslider_optionset = 'default';
   $flexslider_picture_optionset->imagestyle_type = 'image_style';
-  $flexslider_picture_optionset->mapping = 'slideshow_wide';
+  $flexslider_picture_optionset->mapping = '';
+  $flexslider_picture_optionset->fallback = '';
   $export['default'] = $flexslider_picture_optionset;
 
   return $export;

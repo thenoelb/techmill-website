@@ -10,7 +10,7 @@
 function techmill_image_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_image_body'
+  // Exported field_base: 'field_image_body'.
   $field_bases['field_image_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -19,14 +19,6 @@ function techmill_image_field_default_field_bases() {
     'field_name' => 'field_image_body',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(
@@ -40,7 +32,7 @@ function techmill_image_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_image_img'
+  // Exported field_base: 'field_image_img'.
   $field_bases['field_image_img'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -49,14 +41,6 @@ function techmill_image_field_default_field_bases() {
     'field_name' => 'field_image_img',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
     ),
     'indexes' => array(
       'fid' => array(
@@ -73,7 +57,7 @@ function techmill_image_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_image_title'
+  // Exported field_base: 'field_image_title'.
   $field_bases['field_image_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -82,14 +66,6 @@ function techmill_image_field_default_field_bases() {
     'field_name' => 'field_image_title',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(
